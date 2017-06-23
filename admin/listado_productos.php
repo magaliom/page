@@ -4,7 +4,7 @@
  $resultado = $con->query($sql);
  ?>
   <body class="nav-md">
-    <div class="container body">
+    <div class="container body" >
       <div class="main_container">
         <div class="col-md-3 left_col">
           <? include_once('inc/left_menu.php');?>
@@ -32,25 +32,38 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-
-                  <div class="x_content" >
-                <div class="row">
-                  <? foreach($resultado as $row){  ?>
-                  <div class="col-sm-6 col-md-4">
+                  
+                     <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+            
+                    <br />
+                     <? foreach($resultado as $row){  ?>
+                     <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
                     <img src="..." alt="...">
                      <div class="caption">
                     <h3><? echo $row['Nombre_de_producto']?></h3>
                 <p><? echo $row['descripcion']?></p>
-                <a href=""> Ver mas</a>
+              <a href="ver_mas.php?id=<?=$row['id_producto']?>"> Ver mas</a>
               </div>
             </div>
           </div>
-        <?}?>     
-        </div>
-      
-        </div> 
-                  
+                   <?}?>  
+
+              </div>
+            </div>
+             </div>
+            </div>
+            </div>
+                        
+
         <!-- /page content -->
 <? include_once('inc/footer.php');
-
+                    
+                    
+                     
+                  
+                    
+                 
+                        
+                 
