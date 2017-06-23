@@ -34,9 +34,8 @@
                   </div>
 
                   <div class="x_content" >
-
                 <div class="row">
-                 <? foreach($resultado as $row){  ?>
+                  <? foreach($resultado as $row){  ?>
                   <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
                     <img src="..." alt="...">
@@ -47,9 +46,9 @@
               </div>
             </div>
           </div>
-           
+        <?}?>     
         </div>
-        <?}?>
+      
         </div> 
                   
         <!-- /page content -->
