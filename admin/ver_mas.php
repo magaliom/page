@@ -32,8 +32,9 @@
                            </div> 
                            
                            <div class="row">
-                                <div class="">
-                                    <img src="<?$resultado['imagen_de_producto']?>" alt="" border="0" />
+                                <div class="text-center">
+                                 
+                                    <img src="file_sitio/<?=$resultado['id_producto']?>/<?=$resultado['imagen_de_producto']?>.png" alt="" border="0"/>
                                 </div> 
                             </div>   
                             

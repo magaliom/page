@@ -40,7 +40,7 @@
                      <? foreach($resultado as $row){  ?>
                      <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
-                    <img src="..." alt="...">
+                    <img src="file_sitio/<?=$row['id_producto']?>/<?=$row['imagen_de_producto']?>.png" alt="..." class="tamano_imagen">
                      <div class="caption">
                     <h3><? echo $row['Nombre_de_producto']?></h3>
                 <p><? echo $row['descripcion']?></p>
@@ -57,11 +57,20 @@
             </div>
                         
 
-        <!-- /page content -->
+        <!-- estilos-->
+        <style type="text/css"> 
+.tamano_imagen { 
+
+    height: 242px;
+    width: 200px;
+    
+} 
+</style>       
 <? include_once('inc/footer.php');
                     
                     
                      
+                
                   
                     
                  
