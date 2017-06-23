@@ -1,0 +1,8 @@
+<?
+// datos de conexión
+
+$hostname = '127.0.0.1';
+$database = 'carrito';
+$username = 'root';
+$password = '';
+?> 
