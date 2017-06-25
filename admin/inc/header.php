@@ -1,11 +1,12 @@
-<? session_start(); 
+<?php session_start(); 
 
 require_once('funcs.php');
 require_once('db_config.php');
 require_once('clases/userLogin.php');
 
 try {        
-	$con = new PDO('mysql:host='.$hostname.';dbname='.$database, $username, $password);
+	//$con = new PDO('mysql:host='.$hostname.';port=3306;dbname='.$database, $username, $password);
+    $con = new PDO('mysql:unix_socket=/Applications/MAMP/tmp/mysql/mysql.sock;dbname='.$database, $username, $password);
 }
 catch (PDOException $e) {
 	print "¡Error!: " . $e->getMessage();

@@ -40,7 +40,6 @@
               </div>
               <div>
                 <input type="submit" value="Ingresar">
-               
               </div>
 
               <div class="clearfix"></div>
@@ -61,7 +60,7 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-         <? include_once('crear_cuenta.php') ?>
+         <?php include_once('crear_cuenta.php') ?>
             
              
           </section>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 
@@ -19,6 +19,3 @@ function redirect($pURL)
 		exit();
 	}	
 }
-
-
-?>

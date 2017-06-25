@@ -1,4 +1,4 @@
-<? include_once('inc/header.php');?>
+<?php include_once('inc/header.php');?>
 <?
  $sql = 'SELECT * FROM productos';
  $resultado = $con->query($sql);
@@ -7,7 +7,7 @@
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
-          <? include_once('inc/left_menu.php');?>
+          <?php include_once('inc/left_menu.php');?>
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -36,13 +36,13 @@
                   <div class="x_content" >
 
                 <div class="row">
-                 <? foreach($resultado as $row){  ?>
+                 <?php foreach($resultado as $row){  ?>
                   <div class="col-sm-6 col-md-4">
                   <div class="thumbnail">
                     <img src="..." alt="...">
                      <div class="caption">
-                    <h3><? echo $row['Nombre_de_producto']?></h3>
-                <p><? echo $row['descripcion']?></p>
+                    <h3><?php echo $row['Nombre_de_producto']?></h3>
+                <p><?php echo $row['descripcion']?></p>
                 <a href=""> Ver mas</a>
               </div>
             </div>
@@ -53,5 +53,5 @@
         </div> 
                   
         <!-- /page content -->
-<? include_once('inc/footer.php');
+<?php include_once('inc/footer.php');
 

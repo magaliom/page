@@ -1,9 +1,9 @@
 
-              <form action="" method="POST">
+              <form action="login.php" method="POST">
               <h1>Crear Cuenta</h1>
              
               <div>
-                <input type="email" name="email"  class="form-control" placeholder="Email" required="" />
+                <input type="text" name="email"  class="form-control" placeholder="Email" required="" />
               </div>
               
               <div>
@@ -18,7 +18,7 @@
                 <input type="password" name="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.php">Registrarme</a>
+                <input type="submit" name="crear_cuenta" class="btn btn-default submit" value="Registrarme">Registrarme</a>
               </div>
 
               <div class="clearfix"></div>
@@ -30,27 +30,14 @@
 
                 <div class="clearfix"></div>
                 <br />
-
-                
               </div>
             </form>
             
-           <? 
-
-                    $email = $_POST['email'];
-
-                    $nombre = $_POST['nombre'];
-
-                    $apellido = $_POST['apellido'];
-
-                    $password = $_POST['password'];
-
-            
-            $sql = "INSERT INTO usuarios (email, nombre, apellido, pass) 
-                    VALUES ('$email','$nombre','$apellido','$password')";
-            $con->exec($sql);
-
-
-		 
-            ?>
+           <?php 
+           require_once 'inc/dbhelper.php';
+           require_once 'inc/funcs.php';
+           if (isset($_POST["crear_cuenta"])) {
+              DBHelper::crearCuenta($_POST['email'], $_POST['nombre'], $_POST['apellido'], $_POST['password']);
+           }
+          ?>
            
